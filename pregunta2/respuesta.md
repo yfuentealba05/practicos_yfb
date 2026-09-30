@@ -1,0 +1,1 @@
+El clado más distante corresponde al grupo DpleXDH, BmorXDH, CcapXDH, CvicXDH y MrotXDH, ya que presentan el branch más extenso a partir del nodo ancestral común.
