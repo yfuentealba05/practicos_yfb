@@ -1,0 +1,130 @@
+- STAGE: Before start
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: before_start
+- STAGE: Read error correction
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: ec_start
+- STAGE: Read error correction
+  args:
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/corrected/configs/config.info
+  config_dir: corrected
+  del_after:
+  - tmp/hammer_hhkwg9rf
+  output_files:
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/corrected/corrected.yaml
+  path: /usr/libexec/spades/spades-hammer
+  short_name: ec_runtool
+- STAGE: corrected reads compression
+  args:
+  - /usr/share/spades/spades_pipeline/scripts/compress_all.py
+  - --input_file
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/corrected/corrected.yaml
+  - --ext_python_modules_home
+  - /usr/share/spades
+  - --max_threads
+  - '16'
+  - --output_dir
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/corrected
+  - --gzip_output
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: /usr/bin/python3
+  short_name: ec_compress
+- STAGE: Read error correction
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: ec_finish
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_start
+- STAGE: K21
+  args:
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/K21/configs/config.info
+  config_dir: K21
+  del_after: []
+  output_files: []
+  path: /usr/libexec/spades/spades-core
+  short_name: k21
+- STAGE: K33
+  args:
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/K33/configs/config.info
+  config_dir: K33
+  del_after: []
+  output_files: []
+  path: /usr/libexec/spades/spades-core
+  short_name: k33
+- STAGE: Copy files
+  args:
+  - /usr/share/spades/spades_pipeline/scripts/copy_files.py
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/K33/before_rr.fasta
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/before_rr.fasta
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/K33/assembly_graph_after_simplification.gfa
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/assembly_graph_after_simplification.gfa
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/K33/final_contigs.fasta
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/contigs.fasta
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/K33/first_pe_contigs.fasta
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/first_pe_contigs.fasta
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/K33/strain_graph.gfa
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/strain_graph.gfa
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/K33/scaffolds.fasta
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/scaffolds.fasta
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/K33/scaffolds.paths
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/scaffolds.paths
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/K33/assembly_graph_with_scaffolds.gfa
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/assembly_graph_with_scaffolds.gfa
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/K33/assembly_graph.fastg
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/assembly_graph.fastg
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/K33/final_contigs.paths
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/contigs.paths
+  config_dir: ''
+  del_after:
+  - .bin_reads
+  - tmp/spades_d3khqrg1
+  output_files: []
+  path: /usr/bin/python3
+  short_name: copy_files
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_finish
+- STAGE: Breaking scaffolds
+  args:
+  - /usr/share/spades/spades_pipeline/scripts/breaking_scaffolds_script.py
+  - --result_scaffolds_filename
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/scaffolds.fasta
+  - --misc_dir
+  - /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/misc
+  - --threshold_for_breaking_scaffolds
+  - '3'
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: /usr/bin/python3
+  short_name: bs
+- STAGE: Terminate
+  args: []
+  config_dir: ''
+  del_after:
+  - configs
+  output_files: []
+  path: 'true'
+  short_name: terminate

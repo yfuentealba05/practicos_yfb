@@ -1,0 +1,37 @@
+Command line: /usr/libexec/spades/spades.py	-1	/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/GSNO_SRR1582646_1.fastq	-2	/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/GSNO_SRR1582646_2.fastq	-1	/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/GSNO_SRR1582647_1.fastq	-2	/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/GSNO_SRR1582647_2.fastq	-1	/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/GSNO_SRR1582648_1.fastq	-2	/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/GSNO_SRR1582648_2.fastq	-1	/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/wt_SRR1582649_1.fastq	-2	/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/wt_SRR1582649_2.fastq	-1	/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/wt_SRR1582650_1.fastq	-2	/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/wt_SRR1582650_2.fastq	-1	/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/wt_SRR1582651_1.fastq	-2	/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/wt_SRR1582651_2.fastq	-o	/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq	
+
+System information:
+  SPAdes version: 3.15.5
+  Python version: 3.14.4
+  OS: Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43
+
+Output dir: /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq
+Mode: read error correction and assembling
+Debug mode is turned OFF
+
+Dataset parameters:
+  Standard mode
+  For multi-cell/isolate data we recommend to use '--isolate' option; for single-cell MDA data use '--sc'; for metagenomic data use '--meta'; for RNA-Seq use '--rna'.
+  Reads:
+    Library number: 1, library type: paired-end
+      orientation: fr
+      left reads: ['/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/GSNO_SRR1582646_1.fastq', '/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/GSNO_SRR1582647_1.fastq', '/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/GSNO_SRR1582648_1.fastq', '/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/wt_SRR1582649_1.fastq', '/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/wt_SRR1582650_1.fastq', '/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/wt_SRR1582651_1.fastq']
+      right reads: ['/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/GSNO_SRR1582646_2.fastq', '/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/GSNO_SRR1582647_2.fastq', '/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/GSNO_SRR1582648_2.fastq', '/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/wt_SRR1582649_2.fastq', '/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/wt_SRR1582650_2.fastq', '/mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/wt_SRR1582651_2.fastq']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+Read error correction parameters:
+  Iterations: 1
+  PHRED offset will be auto-detected
+  Corrected reads will be compressed
+Assembly parameters:
+  k: automatic selection based on read length
+  Repeat resolution is enabled
+  Mismatch careful mode is turned OFF
+  MismatchCorrector will be SKIPPED
+  Coverage cutoff is turned OFF
+Other parameters:
+  Dir for temp files: /mnt/c/Users/ACER/Desktop/Bioinformatica_Aplicada/clases_practicas/prueba_softwares/spades/data/ensamblajeRNAseq/tmp
+  Threads: 16
+  Memory limit (in Gb): 7
+
