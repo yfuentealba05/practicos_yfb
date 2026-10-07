@@ -1,0 +1,13 @@
+{
+	"n_targets": 637,
+	"n_bootstraps": 0,
+	"n_processed": 60000,
+	"n_pseudoaligned": 25538,
+	"n_unique": 25522,
+	"p_pseudoaligned": 42.6,
+	"p_unique": 42.5,
+	"kallisto_version": "0.48.0",
+	"index_version": 10,
+	"start_time": "Wed Oct  7 11:39:06 2026",
+	"call": "kallisto quant -i transcripts.idx -o abundancia_out -b 100 ../GSNO_SRR1582646_1.fastq ../GSNO_SRR1582646_1.fastq ../GSNO_SRR1582647_1.fastq ../GSNO_SRR1582647_2.fastq ../GSNO_SRR1582648_1.fastq ../GSNO_SRR1582648_2.fastq ../wt_SRR1582649_1.fastq ../wt_SRR1582649_2.fastq ../wt_SRR1582650_1.fastq ../wt_SRR1582650_2.fastq ../wt_SRR1582651_1.fastq ../wt_SRR1582651_2.fastq"
+}
